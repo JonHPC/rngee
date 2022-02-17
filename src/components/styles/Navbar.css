@@ -5,6 +5,9 @@ header{
     align-items:center;
     font-size:1em;
     gap:0.5em;
+    background-color:rgb(126, 176, 250);
+    width:100%;
+    box-shadow: 5px 3px 10px rgb(62, 90, 131);
 }
 
 @media (min-width:600px){
