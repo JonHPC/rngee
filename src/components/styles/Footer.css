@@ -1,0 +1,12 @@
+
+#footer{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    gap:1em;
+}
+
+#footer > a > img {
+    height:64px;
+    width:64px;
+}

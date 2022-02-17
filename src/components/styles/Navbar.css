@@ -1,0 +1,46 @@
+
+header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1em;
+    gap:0.5em;
+}
+
+@media (min-width:600px){
+    header{font-size:1.5em;}
+}
+
+@media (min-width:900px){
+    header{font-size:2em;}
+}
+
+header > a {
+    text-decoration:none;
+    color:black;
+    transition:0.3s;
+}
+
+header > a:hover{
+    color:gray;
+    transform:scale(1.1);
+}
+
+#nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    gap:1em;
+}
+
+#nav-links > a{
+    text-decoration:none;
+    color:black;
+    transition: 0.3s;
+}
+
+#nav-links > a:hover {
+    color:gray;
+    transform:scale(1.1);
+}
