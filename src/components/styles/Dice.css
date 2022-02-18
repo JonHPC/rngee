@@ -58,6 +58,7 @@
 
 .dice-btn__add{
     background-color:rgb(38, 214, 141);
+    width:128px;
 }
 
 .dice-btn__add:hover{
@@ -72,6 +73,7 @@
 
 .dice-btn__remove{
     background-color:rgb(255, 98, 98);
+    width:128px;
 }
 
 .dice-btn__remove:hover{

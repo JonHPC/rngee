@@ -36,21 +36,22 @@ export default function Dice(){
             let output = Math.floor(Math.random() * 6);
             let diceImg = document.getElementById(`dice${i}`);
             diceImg.src = `${diceArray[output]}`;
+            diceImg.alt = "";
         }
     }
 
     return(
         <div className = "dice">
             <div id= "dice-imgs">
-                <img id="dice1" src={dice1}></img>
+                <img id="dice1" src={dice1} alt=""></img>
             </div>
             <h1>Dice: {dice}</h1>
             <div className="roll-dice">
                 <button className="roll-dice__go" onClick={rollDice}>Roll</button>
             </div>
             <div className="dice-btn">
-                <button className="dice-btn__add" onClick={addDice}>+</button>
                 <button className="dice-btn__remove" onClick={removeDice}>-</button>
+                <button className="dice-btn__add" onClick={addDice}>+</button>
             </div>
             
         </div>

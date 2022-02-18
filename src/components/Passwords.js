@@ -1,5 +1,6 @@
 //./src/components/Passwords.js
 
+import React from "react";
 import "./styles/Passwords.css";
 
 export default function Passwords(){

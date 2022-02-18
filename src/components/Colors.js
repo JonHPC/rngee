@@ -1,5 +1,5 @@
 //./src/components/Colors.js
-
+import React from "react";
 import "./styles/Colors.css";
 
 export default function Colors(){
