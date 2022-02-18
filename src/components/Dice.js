@@ -33,16 +33,16 @@ export default function Dice(){
 
     const rollDice = () => {
         for(let i = 1; i <= dice; i++){
-            let output = 1+ Math.floor(Math.random() * 6);
-            let diceImg = document.getElementById(`dice${dice}`);
-            diceImg.src = `./images/dice-${output}.png`;
+            let output = Math.floor(Math.random() * 6);
+            let diceImg = document.getElementById(`dice${i}`);
+            diceImg.src = `${diceArray[output]}`;
         }
     }
 
     return(
         <div className = "dice">
             <div id= "dice-imgs">
-                <img id="dice1" src="./images/dice-1.png"></img>
+                <img id="dice1" src={dice1}></img>
             </div>
             <h1>Dice: {dice}</h1>
             <div className="roll-dice">
