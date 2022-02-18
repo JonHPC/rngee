@@ -10,6 +10,40 @@
     gap:1em;
 }
 
+#dice-imgs{
+    display: flex;
+    gap:16px;
+    flex-wrap: wrap;
+
+}
+
+#dice-imgs>img{
+    height:128px;
+    width:128px;
+}
+
+.roll-dice__go{
+    padding: 16px 32px;
+    text-decoration:none;
+    font-size:2em;
+    text-align:center;
+    border:none;
+    border-radius:16px;
+    transition: 0.2s;
+    background-color: rgb(85, 187, 255);
+    box-shadow: 5px 5px 5px gray;
+}
+
+.roll-dice__go:hover{
+    background-color: rgb(133, 204, 252);
+    transform:scale(1.1);
+}
+
+.roll-dice__go:active{
+    background-color: rgb(41, 116, 167);
+    transform:scale(1);
+}
+
 .dice-btn > button{
    padding: 16px 32px;
    font-size:2em;

@@ -10,15 +10,44 @@ import dice6 from './images/dice-6.png';
 
 export default function Dice(){
     const [dice, setDice] = useState(1);
+    const diceArray = [dice1, dice2, dice3, dice4, dice5, dice6];
 
     useEffect(() => {console.log(`You have ${dice} dice.`)}, [dice]);
 
-    const addDice = () => {if(dice < 10){setDice(dice + 1);}}
-    const removeDice = () => {if(dice > 1){setDice(dice - 1);}}
+    const addDice = () => {
+        if(dice < 10){
+            setDice(dice + 1);
+            let newDice = document.createElement("img");
+            newDice.id = `dice${dice+1}`;
+            newDice.src = dice1;
+            document.getElementById('dice-imgs').appendChild(newDice);
+        }
+    }
+
+    const removeDice = () => {
+        if(dice > 1){
+            document.getElementById(`dice${dice}`).remove();
+            setDice(dice - 1);
+        }
+    }
+
+    const rollDice = () => {
+        for(let i = 1; i <= dice; i++){
+            let output = 1+ Math.floor(Math.random() * 6);
+            let diceImg = document.getElementById(`dice${dice}`);
+            diceImg.src = `./images/dice-${output}.png`;
+        }
+    }
 
     return(
         <div className = "dice">
+            <div id= "dice-imgs">
+                <img id="dice1" src="./images/dice-1.png"></img>
+            </div>
             <h1>Dice: {dice}</h1>
+            <div className="roll-dice">
+                <button className="roll-dice__go" onClick={rollDice}>Roll</button>
+            </div>
             <div className="dice-btn">
                 <button className="dice-btn__add" onClick={addDice}>+</button>
                 <button className="dice-btn__remove" onClick={removeDice}>-</button>
