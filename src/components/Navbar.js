@@ -1,26 +1,25 @@
 //src/components/Navbar.js
 
 import React from "react";
-import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
 import "./styles/Navbar.css";
-import Dice from "./Dice";
+import { Link} from "react-router-dom";
 
 
 
 export default function Navbar(){
 
     return(
-        <Router className = "header">
-            <Link to="/" id="home-btn"><h3>rngee.io</h3></Link>
+        <div className = "header">
+            <Link to="/home" id="home-btn">rngee.io</Link>
             <div id="nav-links">
-                <Link to={Dice} className="nav-btn">Dice</Link>
-                <a href="#number">Number</a>
-                <a href="#coins">Coins</a>
-                <a href="#words">Words</a>
-                <a href="#password">Passwords</a>
-                <a href="#colors">Colors</a>
+                <Link to="/dice" className="nav-btn">Dice</Link>
+                <Link to="/number" className="nav-btn">Number</Link>
+                <Link to="/coins" className="nav-btn">Coins</Link>
+                <Link to="/words" className="nav-btn">Words</Link>
+                <Link to="/passwords" className="nav-btn">Passwords</Link>
+                <Link to="/colors" className="nav-btn">Colors</Link>
             </div>
-        </Router>
+        </div>
     );
 }
 

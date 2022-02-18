@@ -1,36 +1,48 @@
 
 .header{
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
     align-items:center;
-    font-size:1em;
     gap:0.5em;
     background-color:rgb(126, 176, 250);
     width:100%;
     box-shadow: 5px 3px 10px rgb(62, 90, 131);
+    padding:1em;
 }
 
 @media (min-width:600px){
-    header{font-size:1.5em;}
+    #home-btn{font-size:1.5em;}
+    .nav-btn{font-size:1em;}
+
 }
 
 @media (min-width:900px){
-    header{font-size:2em;}
+    #home-btn{font-size:2em;}
+    .nav-btn{font-size:1.25em;}
 }
 
 #home-btn{
     text-decoration: none;
     color:black;
+    font-size:2em;
+    font-style:bold;
+    transition:0.2s;
+}
+
+#home-btn:hover{
+    color:white;
+    transform:scale(1.1);
 }
 
 .nav-btn{
     text-decoration:none;
     color:black;
-    transition:0.3s;
+    transition:0.2s;
+    font-size:1.25em;
 }
 
-.nav-btn:hover{
-    color:gray;
+.nav-btn:hover {
+    color: white;
     transform:scale(1.1);
 }
 
@@ -42,13 +54,4 @@
     gap:1em;
 }
 
-#nav-links > a{
-    text-decoration:none;
-    color:black;
-    transition: 0.3s;
-}
 
-#nav-links > a:hover {
-    color:gray;
-    transform:scale(1.1);
-}
