@@ -1,0 +1,51 @@
+.dice{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1em;
+}
+
+.dice-btn{
+    display:flex;
+    gap:1em;
+}
+
+.dice-btn > button{
+   padding: 16px 32px;
+   font-size:2em;
+   text-decoration:none;
+   text-align: center;
+   border: none;
+   color:rgb(0, 0, 0);
+   border-radius:16px;
+   box-shadow: 5px 5px 5px gray;
+   transition:0.2s;
+}
+
+.dice-btn__add{
+    background-color:rgb(38, 214, 141);
+}
+
+.dice-btn__add:hover{
+    background-color:rgb(92, 233, 174);
+    transform:scale(1.1);
+}
+
+.dice-btn__add:active{
+    background-color:rgb(24, 170, 109);
+    transform:scale(1);
+}
+
+.dice-btn__remove{
+    background-color:rgb(255, 98, 98);
+}
+
+.dice-btn__remove:hover{
+    background-color:rgb(252, 118, 118);
+    transform:scale(1.1);
+}
+
+.dice-btn__remove:active{
+    background-color:rgb(197, 66, 66);
+    transform:scale(1);
+}

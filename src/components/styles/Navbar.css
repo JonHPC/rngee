@@ -1,5 +1,5 @@
 
-header{
+.header{
     display:flex;
     justify-content:center;
     align-items:center;
@@ -18,13 +18,18 @@ header{
     header{font-size:2em;}
 }
 
-header > a {
+#home-btn{
+    text-decoration: none;
+    color:black;
+}
+
+.nav-btn{
     text-decoration:none;
     color:black;
     transition:0.3s;
 }
 
-header > a:hover{
+.nav-btn:hover{
     color:gray;
     transform:scale(1.1);
 }

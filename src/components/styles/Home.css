@@ -3,7 +3,8 @@
     grid-gap: 1em;
     max-width:1200px;
     margin: 0 auto;
-    padding-bottom:2em;
+    padding-top:1em;
+    padding-bottom:1em;
 }
 
 @media (min-width:600px){
@@ -15,7 +16,7 @@
 }
 
 .home__div{
-    background-color:rgb(255, 247, 231);
+    background-color:rgb(255, 255, 255);
     border-radius:1em;
     padding:1.5em;
     display:flex;
@@ -23,7 +24,7 @@
     justify-content:space-between;
     align-items:center;
     transition:0.3s;
-    box-shadow:10px 5px 10px rgb(179, 179, 179);
+    box-shadow:5px 5px 5px rgb(179, 179, 179);
 }
 
 .home__div:hover{
