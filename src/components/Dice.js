@@ -40,6 +40,8 @@ export default function Dice(){
         }
     }
 
+    //Later add different dice, like d20 and d10
+
     return(
         <div className = "dice">
             <div id= "dice-imgs">

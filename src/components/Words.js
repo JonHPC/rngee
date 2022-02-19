@@ -5,6 +5,7 @@ import "./styles/Words.css";
 export default function Words(){
     const [word, setWord] = useState("Generate a random word");
 
+    //placeholder array, I'll connect to a random word API later
     const words = ["Apple", "Box", "Car", "Disastrous", "X-ray", "Choke", "Small", "Writing", "Tendency", "Morning", 
     "Magic", "Back", "Ajar", "Machine", "Check", "Mend", "Dispensable", "Abashed", "Wish", "Giants", "Plausible", 
     "Bashful", "Sink", "Press", "Sneaky", "Annoy", "Lovely", "The", "Quick", "Brown", "Fox", "Jumped", "Over", 
@@ -30,8 +31,9 @@ export default function Words(){
     "Plutonium", "Nuclear", "Reactor", "Planets", "Earth", "Venus", "Mars", "Mercury", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto",
     "Comet", "Asteroid", "Shooting Stars", "Sun", "Stars", "Burning", "Electricity", "Cached", "Modules", "Manifest", "Framework",
     "Rules", "Node", "React", "Loaders", "Note", "That", "View", "Browser", "Host", "Built", "Tower", "Brick", "Cement"
-
     ];
+
+    //Later will add a feature to adjust the number of letters
 
     const generateWord = () => {
         let index = Math.floor(Math.random() * words.length);
