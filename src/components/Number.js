@@ -21,6 +21,7 @@ export default function Number(){
     const setMaxValue = (e) => {
         setMax(Math.floor(e.target.value));
     }
+
     return(
         <div className="number">
             <h1 id="number-text">{num}</h1>

@@ -1,7 +1,7 @@
 //src/components/Home.js
 
 import React from "react";
-import { Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import diceIcon from "./images/dice_icon.png";
 import numberIcon from "./images/number_icon.png";
 import coinsIcon from "./images/coins_icon.png";
