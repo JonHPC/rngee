@@ -23,24 +23,24 @@
 }
 
 .roll-dice__go{
-    padding: 16px 32px;
     text-decoration:none;
-    font-size:2em;
-    text-align:center;
     border:none;
+    padding:16px 32px;
+    font-size:1.5em;
+    background-color:rgb(80, 255, 203);
     border-radius:16px;
-    transition: 0.2s;
-    background-color: rgb(85, 187, 255);
     box-shadow: 5px 5px 5px gray;
+    transition:0.2s;
+    margin-bottom:1em;
 }
 
 .roll-dice__go:hover{
-    background-color: rgb(133, 204, 252);
+    background-color:rgb(125, 250, 212);
     transform:scale(1.1);
 }
 
 .roll-dice__go:active{
-    background-color: rgb(41, 116, 167);
+    background-color:rgb(32, 194, 145);
     transform:scale(1);
 }
 
@@ -57,17 +57,17 @@
 }
 
 .dice-btn__add{
-    background-color:rgb(38, 214, 141);
+    background-color:rgb(78, 154, 240);
     width:128px;
 }
 
 .dice-btn__add:hover{
-    background-color:rgb(92, 233, 174);
+    background-color:rgb(126, 181, 243);
     transform:scale(1.1);
 }
 
 .dice-btn__add:active{
-    background-color:rgb(24, 170, 109);
+    background-color:rgb(29, 99, 165);
     transform:scale(1);
 }
 

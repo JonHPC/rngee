@@ -26,7 +26,7 @@
     color:black;
     font-size:2em;
     font-style:bold;
-    transition:0.2s;
+    transition:0.3s;
 }
 
 #home-btn:hover{
@@ -37,7 +37,7 @@
 .nav-btn{
     text-decoration:none;
     color:black;
-    transition:0.2s;
+    transition:0.3s;
     font-size:1.25em;
 }
 

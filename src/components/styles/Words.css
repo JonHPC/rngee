@@ -1,0 +1,33 @@
+.words{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    justify-content:space-evenly;
+    align-items:center;
+}
+
+.words > h1 {
+    font-size:3em;
+}
+
+.words__btn{
+    text-decoration:none;
+    border:none;
+    padding:16px 32px;
+    font-size:1.5em;
+    background-color:rgb(80, 255, 203);
+    border-radius:16px;
+    box-shadow: 5px 5px 5px gray;
+    transition:0.2s;
+    margin-bottom:1em;
+}
+
+.words__btn:hover{
+    background-color:rgb(125, 250, 212);
+    transform:scale(1.1);
+}
+
+.words__btn:active{
+    background-color:rgb(32, 194, 145);
+    transform:scale(1);
+}
