@@ -8,7 +8,7 @@ export default function Footer(){
     return(
         <div id="footer">
             <h3>Copyright © 2022 Jonathan Chen</h3>
-            <a href="https:/jonhpc.github.io/rngee"><img src={githubIcon} alt="github"></img></a>
+            <a href="https://github.com/jonhpc"><img src={githubIcon} alt="github"></img></a>
         </div>
     );
 }
