@@ -10,21 +10,10 @@
     padding:1em;
 }
 
-@media (min-width:600px){
-    #home-btn{font-size:1.5em;}
-    .nav-btn{font-size:1em;}
-
-}
-
-@media (min-width:900px){
-    #home-btn{font-size:2em;}
-    .nav-btn{font-size:1.25em;}
-}
-
 #home-btn{
     text-decoration: none;
     color:black;
-    font-size:2em;
+    font-size:1.25em;
     font-style:bold;
     transition:0.3s;
 }
@@ -38,7 +27,7 @@
     text-decoration:none;
     color:black;
     transition:0.3s;
-    font-size:1.25em;
+    font-size:1em;
 }
 
 .nav-btn:hover {
@@ -54,4 +43,14 @@
     gap:1em;
 }
 
+@media (min-width:600px){
+    #home-btn{font-size:1.5em;}
+    .nav-btn{font-size:1.25em;}
+
+}
+
+@media (min-width:900px){
+    #home-btn{font-size:2.5em;}
+    .nav-btn{font-size:1.5em;}
+}
 

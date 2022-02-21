@@ -33,8 +33,6 @@ export default function Words(){
     "Rules", "Node", "React", "Loaders", "Note", "That", "View", "Browser", "Host", "Built", "Tower", "Brick", "Cement"
     ];
 
-    //Later will add a feature to adjust the number of letters
-
     const generateWord = () => {
         let index = Math.floor(Math.random() * words.length);
         setWord(words[index]);

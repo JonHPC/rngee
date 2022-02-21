@@ -2,15 +2,13 @@
 
 import React from "react";
 import "./styles/Navbar.css";
-import { Link} from "react-router-dom";
-
-
+import {Link} from "react-router-dom";
 
 export default function Navbar(){
 
     return(
         <div className = "header">
-            <Link to="/home" id="home-btn">rngee.io</Link>
+            <Link to="/" id="home-btn">rngee.io</Link>
             <div id="nav-links">
                 <Link to="/dice" className="nav-btn">Dice</Link>
                 <Link to="/number" className="nav-btn">Number</Link>

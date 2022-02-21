@@ -10,7 +10,6 @@ import passwordsIcon from "./images/passwords_icon.png";
 import colorsIcon from "./images/colors_icon.png";
 import "./styles/Home.css";
 
-
 export default function Home(){
     return(
         <div className="home">

@@ -1,5 +1,5 @@
 //src/components/Dice.js
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import './styles/Dice.css';
 import dice1 from "./images/dice-1.png";
 import dice2 from './images/dice-2.png';
@@ -11,8 +11,6 @@ import dice6 from './images/dice-6.png';
 export default function Dice(){
     const [dice, setDice] = useState(1);
     const diceArray = [dice1, dice2, dice3, dice4, dice5, dice6];
-
-    useEffect(() => {console.log(`You have ${dice} dice.`)}, [dice]);
 
     const addDice = () => {
         if(dice < 10){
@@ -40,8 +38,6 @@ export default function Dice(){
         }
     }
 
-    //Later add different dice, like d20 and d10
-
     return(
         <div className = "dice">
             <div id= "dice-imgs">
@@ -55,7 +51,6 @@ export default function Dice(){
                 <button className="dice-btn__remove" onClick={removeDice}>-</button>
                 <button className="dice-btn__add" onClick={addDice}>+</button>
             </div>
-            
         </div>
     );
 }

@@ -9,7 +9,7 @@ export default function Coins(){
     const [result, setResult] = useState("Flip a coin");
 
     const flipCoin = () => {
-        let flip = (Math.floor(Math.random() * 2) == 0);
+        let flip = (Math.floor(Math.random() * 2) === 0);
 
         if(flip){
             setResult("Heads");
@@ -21,7 +21,7 @@ export default function Coins(){
     }
     return(
         <div className="coins">
-            <img src={coin}></img>
+            <img src={coin} alt="coin"></img>
             <h1>{result}</h1>
             <button onClick={flipCoin} className="coins__btn">Flip Coin</button>
         </div>

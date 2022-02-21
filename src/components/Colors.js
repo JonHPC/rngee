@@ -3,15 +3,10 @@ import React, {useState} from "react";
 import "./styles/Colors.css";
 
 export default function Colors(){
-    const [color, setColor] = useState("Generate a random hexadecimal color");
+    const [color, setColor] = useState("#000000");
 
     const generateColor = () => {
         setColor('#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0'));
-    }
-
-    const copyColor = () => {
-        navigator.clipboard.writeText(`${color}`);
-        alert('Color copied!');
     }
 
     const divStyle = {
@@ -23,7 +18,7 @@ export default function Colors(){
             <div className="color-sample" style={divStyle}></div>
             <h1>{color}</h1>
             <button onClick={generateColor} className="colors__btn">Generate Color</button>
-            <button onClick={copyColor}>Copy</button>
+            <button onClick={() => navigator.clipboard.writeText(`${color}`)}>Copy</button>
         </div>
     );
 }

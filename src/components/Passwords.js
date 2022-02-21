@@ -5,7 +5,7 @@ import "./styles/Passwords.css";
 
 export default function Passwords(){
 
-    const [password, setPassword] = useState("Generate a random password");
+    const [password, setPassword] = useState("--------");
     const [length, setLength] = useState(8);
 
     const characters = ['A','a','B','b','C','c','D','d','E','e','F','f','G','g','H','h','I','i','J','j','K','k','L','l','M','m','N','n',
@@ -20,16 +20,10 @@ export default function Passwords(){
             str += characters[index];
         }
         setPassword(str);
-
     }
 
     const updateLength = (e) => {
         setLength(e.target.value);
-    }
-
-    const copyPassword = () => {
-        navigator.clipboard.writeText(`${password}`);
-        alert('Password copied!');
     }
 
     return(
@@ -41,7 +35,7 @@ export default function Passwords(){
                     <input onChange={updateLength} type="range" defaultValue="8" min="8" max="20" className="slider-container__password"></input>
                 </div>
             </label>
-            <button onClick={copyPassword}>Copy</button>
+            <button onClick={() => navigator.clipboard.writeText(`${password}`)}>Copy</button>
         </div>
     );
 }
