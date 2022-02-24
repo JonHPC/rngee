@@ -36,6 +36,7 @@ export default function Words(){
     const generateWord = () => {
         let index = Math.floor(Math.random() * words.length);
         setWord(words[index]);
+
     }
 
     return(
@@ -45,3 +46,4 @@ export default function Words(){
         </div>
     );
 }
+
