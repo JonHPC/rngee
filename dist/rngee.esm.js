@@ -5,11 +5,10 @@ function capitalize(word) {
 }
 
 function randomNumber(min, max, values) {
-    // TODO: add parameter to specify number of random numbers, type (int, float), return array of results
     if (values > 1) {
         let arr = [];
         for (let i = 0; i < values; i++) {
-            arr.push((Math.floor(Math.random() * (max - min + 1) + min)));
+            arr.push(Math.floor(Math.random() * (max - min + 1) + min));
         }
         return arr;
     } else {
@@ -17,9 +16,16 @@ function randomNumber(min, max, values) {
     }
 }
 
-function coinToss() {
-    // TODO: add parameter to specify number of coins, return array of results
-    return Math.floor(Math.random() * 2) === 0 ? 'Heads' : 'Tails';
+function coinToss(tosses = 1, win = "Heads", loss = "Tails") {
+    if (tosses > 1) {
+        let arr = [];
+        for (let i = 0; i < tosses; i++) {
+            arr.push(Math.floor(Math.random() * 2) === 0 ? win : loss);
+        }
+        return arr;
+    } else {
+        return Math.floor(Math.random() * 2) === 0 ? win : loss;
+    }
 }
 
 function randomColor() {
@@ -32,90 +38,13 @@ function diceRoll() {
     return Math.floor(Math.random() * 6) + 1;
 }
 
-function randomPassword(length) {
-    const characters = [
-        'A',
-        'a',
-        'B',
-        'b',
-        'C',
-        'c',
-        'D',
-        'd',
-        'E',
-        'e',
-        'F',
-        'f',
-        'G',
-        'g',
-        'H',
-        'h',
-        'I',
-        'i',
-        'J',
-        'j',
-        'K',
-        'k',
-        'L',
-        'l',
-        'M',
-        'm',
-        'N',
-        'n',
-        'O',
-        'o',
-        'P',
-        'p',
-        'Q',
-        'q',
-        'R',
-        'r',
-        'S',
-        's',
-        'T',
-        't',
-        'U',
-        'u',
-        'V',
-        'v',
-        'W',
-        'w',
-        'X',
-        'x',
-        'Y',
-        'y',
-        'Z',
-        'z',
-        '0',
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '!',
-        '@',
-        '#',
-        '$',
-        '%',
-        '^',
-        '&',
-        '*',
-        '(',
-        ')',
-        '-',
-        '+',
-        '=',
-        '?',
-        '/',
-        '<',
-        '>',
-        '.',
-        ',',
-    ];
+function randomString(length) {
+    // TODO: add parameter to specify length of string, exclude/include lower/upper/nums/symbols
+    // Create an array of characters to choose from
+    const characters = [];
+    for (let i = 32; i < 127; i++) {
+        characters.push(String.fromCharCode(i));
+    }
     let str = '';
     for (let i = 0; i < length; i++) {
         let index = Math.floor(Math.random() * characters.length);
@@ -130,5 +59,5 @@ module.exports = {
     coinToss,
     randomColor,
     diceRoll,
-    randomPassword,
+    randomString,
 };

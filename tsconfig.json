@@ -11,6 +11,6 @@
         // Enhance strictness.
         "noImplicitReturns": true,
         "noUnusedLocals": true,
-        "strict": true,
+        "strict": true
     }
 }

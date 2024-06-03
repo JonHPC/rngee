@@ -1,6 +1,10 @@
 {
+    "experimentalTernaries": false,
     "printWidth": 100,
-    "useTabs": false,
     "tabWidth": 4,
-    "singleQuote": true
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "arrowParens": "always"
 }
