@@ -1,11 +1,20 @@
-// index.js
+// index.ts
 function capitalize(word) {
+    // TODO: randomly capitialize X letters in a string
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
-function randomNumber(min, max) {
+function randomNumber(min, max, values) {
     // TODO: add parameter to specify number of random numbers, type (int, float), return array of results
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    if (values > 1) {
+        let arr = [];
+        for (let i = 0; i < values; i++) {
+            arr.push((Math.floor(Math.random() * (max - min + 1) + min)));
+        }
+        return arr;
+    } else {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
 }
 
 function coinToss() {
