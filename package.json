@@ -1,11 +1,10 @@
 {
     "name": "rngee",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "An open source JavaScript library for generating random values",
     "main": "dist/rngee.cjs.js",
     "module": "dist/rngee.esm.js",
     "browser": "dist/rngee.umd.js",
-    "type": "module",
     "scripts": {
         "build": "rollup -c",
         "test": "jest",

@@ -5,7 +5,7 @@ import pkg from './package.json';
 
 export default [
     {
-        input: 'src/index.js', // your entry point
+        input: 'src/index.ts', // your entry point
         output: {
             name: 'rngee', // package name
             file: pkg.browser,
@@ -21,7 +21,7 @@ export default [
         ],
     },
     {
-        input: 'src/index.js', // your entry point
+        input: 'src/index.ts', // your entry point
         output: [
             { file: pkg.main, format: 'cjs' },
             { file: pkg.module, format: 'es' },

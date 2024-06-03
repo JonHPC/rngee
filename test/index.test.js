@@ -1,4 +1,4 @@
-const index = require('../src/index.js');
+const index = require('../src/index');
 
 test('randomNumber(1, 10) returns a number between 1 and 10', () => {
     const result = index.randomNumber(1, 10);
