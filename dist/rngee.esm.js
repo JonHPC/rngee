@@ -4,7 +4,7 @@ function capitalize(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
-function randomNumber(min, max, values) {
+function randomNumber(min, max, values = 1) {
     if (values > 1) {
         let arr = [];
         for (let i = 0; i < values; i++) {
@@ -33,12 +33,20 @@ function randomColor() {
     return '#' + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, '0');
 }
 
-function diceRoll() {
+function diceRoll(tosses = 1, sides = 6) {
     // TODO: add parameter to specify number of sides, and number of dice, return array of results
-    return Math.floor(Math.random() * 6) + 1;
+    if (tosses > 1) {
+        let arr = [];
+        for (let i = 0; i < tosses; i++) {
+            arr.push(Math.floor(Math.random() * sides) + 1);
+        }
+        return arr;
+    } else {
+        return Math.floor(Math.random() * sides) + 1;
+    }
 }
 
-function randomString(length) {
+function randomString(length = 8) {
     // TODO: add parameter to specify length of string, exclude/include lower/upper/nums/symbols
     // Create an array of characters to choose from
     const characters = [];

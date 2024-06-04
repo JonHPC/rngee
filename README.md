@@ -92,4 +92,30 @@ Output:
 ```
 -   randomColor
 -   diceRoll
+
+```js
+/*
+Input Parameters: 
+    tosses: specify the number of dice to toss (defaults to 1)
+    sides: specify the number of sides, ex. 4, 6, 10, 20 (defaults to 6)
+
+Output:
+    By default, returns 1 number.
+    If 'tosses' is greater than 1, then return an array of numbers
+*/
+```
 -   randomString
+
+```js
+/*
+Input Parameters:
+    length: specify the length of the random string (defaults to 8)
+    lower: boolean to include lower case characters (defaults to true)
+    upper: boolean to include upper case characters (defaults to true)
+    nums: boolean to include number characters (defaults to true)
+    symbols: boolean to include symbol characters (defaults to true)
+
+Output:
+    Outputs a random length string
+*/
+```

@@ -54,8 +54,38 @@ test('diceRoll() returns a number between 1 and 6', () => {
     expect(Array.isArray(result)).toBe(false);
 });
 
+test('diceRoll(3) returns an array of 3 numbers between 1 and 6', () => {
+    const result = index.diceRoll(3);
+    expect(result[0]).toBeGreaterThanOrEqual(1);
+    expect(result[0]).toBeLessThanOrEqual(6);
+    expect(result[1]).toBeGreaterThanOrEqual(1);
+    expect(result[1]).toBeLessThanOrEqual(6);
+    expect(result[2]).toBeGreaterThanOrEqual(1);
+    expect(result[2]).toBeLessThanOrEqual(6);
+    expect(result).toHaveLength(3);
+    expect(Array.isArray(result)).toBe(true);
+});
+
+test('diceRoll(3, 20) returns an array of 3 numbers between 1 and 20', () => {
+    const result = index.diceRoll(3);
+    expect(result[0]).toBeGreaterThanOrEqual(1);
+    expect(result[0]).toBeLessThanOrEqual(20);
+    expect(result[1]).toBeGreaterThanOrEqual(1);
+    expect(result[1]).toBeLessThanOrEqual(20);
+    expect(result[2]).toBeGreaterThanOrEqual(1);
+    expect(result[2]).toBeLessThanOrEqual(20);
+    expect(result).toHaveLength(3);
+    expect(Array.isArray(result)).toBe(true);
+});
+
 test('randomString() returns a string of length 8', () => {
     const result = index.randomString(8);
     expect(result.length).toBe(8);
+    expect(Array.isArray(result)).toBe(false);
+});
+
+test('randomString(12) returns a string of length 12', () => {
+    const result = index.randomString(12);
+    expect(result.length).toBe(12);
     expect(Array.isArray(result)).toBe(false);
 });
