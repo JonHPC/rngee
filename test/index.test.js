@@ -17,10 +17,10 @@ test('randomNumber(1, 10, 2) returns two numbers between 1 and 10 in an array', 
     expect(result[1]).toBeLessThanOrEqual(10);
 });
 
-test('capitalize("hello") returns "Hello"', () => {
-    const result = index.capitalize('hello');
-    expect(result).toBe('Hello');
-    expect(Array.isArray(result)).toBe(false);
+test('randomNumber(-1, 20, -3) throws an error', () => {
+    expect(() => {
+        index.randomNumber(-1, 20, -3);
+    }).toThrow();
 });
 
 test('coinToss() returns either "Heads" or "Tails" once', () => {
@@ -45,6 +45,24 @@ test('randomColor() returns a hex color', () => {
     const result = index.randomColor();
     expect(result).toMatch(/^#[0-9a-f]{6}$/i);
     expect(Array.isArray(result)).toBe(false);
+});
+
+test('randomColor("hex") returns a hex color', () => {
+    const result = index.randomColor('hex');
+    expect(result).toMatch(/^#[0-9a-f]{6}$/i);
+    expect(Array.isArray(result)).toBe(false);
+});
+
+test('randomColor("rgb") returns an rgb color', () => {
+    const result = index.randomColor('rgb');
+    expect(result).toMatch(/^rgb\(\d{1,3}, \d{1,3}, \d{1,3}\)$/);
+    expect(Array.isArray(result)).toBe(false);
+});
+
+test('randomColor("bad") throws an error', () => {
+    expect(() => {
+        index.randomColor('bad');
+    }).toThrow();
 });
 
 test('diceRoll() returns a number between 1 and 6', () => {
@@ -89,3 +107,46 @@ test('randomString(12) returns a string of length 12', () => {
     expect(result.length).toBe(12);
     expect(Array.isArray(result)).toBe(false);
 });
+
+test('randomString(12, true, false, false, false) returns a string of length 12 with only lowercase letters', () => {
+    const result = index.randomString(12, true, false, false, false);
+    expect(result.length).toBe(12);
+    expect(result).toMatch(/^[a-z]{12}$/);
+    expect(Array.isArray(result)).toBe(false);
+});
+
+test('randomString(12, false, true, false, false) returns a string of length 12 with only uppercase letters', () => {
+    const result = index.randomString(12, false, true, false, false);
+    expect(result.length).toBe(12);
+    expect(result).toMatch(/^[A-Z]{12}$/);
+    expect(Array.isArray(result)).toBe(false);
+});
+
+test('randomString(12, false, false, true, false) returns a string of length 12 with only numbers', () => {
+    const result = index.randomString(12, false, false, true, false);
+    expect(result.length).toBe(12);
+    expect(result).toMatch(/^[0-9]{12}$/);
+    expect(Array.isArray(result)).toBe(false);
+});
+
+test('randomString(12, false, false, false, true) returns a string of length 12 with only symbols', () => {
+    const result = index.randomString(12, false, false, false, true);
+    expect(result.length).toBe(12);
+    expect(result).toMatch(/^[!@#$%^&*()_+-={};:<>,./?]{12}$/);
+    expect(Array.isArray(result)).toBe(false);
+});
+
+test('randomString(12, true, true, true, true) returns a string of length 12 with lowercase, uppercase, numbers, and symbols', () => {
+    const result = index.randomString(12, true, true, true, true);
+    expect(result.length).toBe(12);
+    expect(result).toMatch(/^[a-zA-Z0-9!@#$%^&*()_+-={};:<>,./?]{12}$/);
+    expect(Array.isArray(result)).toBe(false);
+});
+
+test('randomString(12, false, false, false, false) throws an error', () => {
+    expect(() => {
+        index.randomString(12, false, false, false, false);
+    }).toThrow();
+});
+
+

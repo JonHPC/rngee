@@ -11,6 +11,7 @@ export default [
             file: pkg.browser,
             format: 'umd',
             exports: 'named',
+            sourcemap: true,
         },
         plugins: [
             resolve(),
