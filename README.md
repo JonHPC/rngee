@@ -41,13 +41,14 @@ $ npm install rngee
 You can import the entire 'rngee' package or the individual functions.
 
 Below is an example of using both methods of calling the functions.
+
 ```js
 // index.js
 
 import rngee, { coinToss } from 'rngee';
 
 function flipCoinRandomTimes() {
-    const numOfTosses = rngee.randomNumber(1,10);
+    const numOfTosses = rngee.randomNumber(1, 10);
     return coinToss(numOfTosses);
 }
 
@@ -83,9 +84,8 @@ console.log(rngee.randomNumbers()); //Returns one values between 1-10
 const min = 4;
 const max = 20;
 console.log(rngee.randomNumbers(min, max)); // Returns one value between 4-20
-const values = 4
+const values = 4;
 console.log(rngee.randomNumbers(min, max, values)); // An array of four values between 4 and 20
-
 ```
 
 -   coinToss
@@ -104,11 +104,11 @@ import rngee from 'rngee';
 console.log(rngee.coinToss()); // Returns either "Heads" or "Tails"
 const tosses = 3;
 console.log(rngee.coinToss(3)); // Returns an array of "Heads" or "Tails"
-const win = "USC";
-const loss = "UCLA";
+const win = 'USC';
+const loss = 'UCLA';
 console.log(rngee.coinToss(1, win, loss)); // Returns either "USC" or "UCLA"
-
 ```
+
 -   randomColor
 
 ```js
@@ -124,6 +124,7 @@ console.log(rngee.randomColor()); // Returns a random Hexcode value
 console.log(rngee.randomColor('hex')); // Returns a random Hexcode value
 console.log(rngee.randomColor('rgb')); // Returns a random RGB value
 ```
+
 -   diceRoll
 
 ```js
@@ -142,6 +143,7 @@ console.log(rngee.diceRoll(tosses)); // Returns 3 dice rolls between 1-6 in an a
 const sides = 20;
 console.log(rngee.diceRoll(1, sides)); // Returns 1 dice roll between 1-20 (d20)
 ```
+
 -   randomString
 
 ```js
@@ -157,7 +159,7 @@ import rngee from 'rngee';
 * @returns a random length string
 */
 console.log(rngee.randomString()); // Returns a random string of 8 characters
-const length = 12
+const length = 12;
 const lower = true;
 const upper = false;
 const nums = true;

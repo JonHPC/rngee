@@ -148,5 +148,3 @@ test('randomString(12, false, false, false, false) throws an error', () => {
         index.randomString(12, false, false, false, false);
     }).toThrow();
 });
-
-

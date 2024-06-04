@@ -1,7 +1,7 @@
 (function (factory) {
-    typeof define === 'function' && define.amd ? define(factory) :
-    factory();
-})((function () { 'use strict';
+    typeof define === 'function' && define.amd ? define(factory) : factory();
+})(function () {
+    'use strict';
 
     // index.ts
 
@@ -27,7 +27,7 @@
         }
     }
 
-    function coinToss(tosses = 1, win = "Heads", loss = "Tails") {
+    function coinToss(tosses = 1, win = 'Heads', loss = 'Tails') {
         if (typeof win !== 'string' || typeof loss !== 'string' || typeof tosses !== 'number') {
             throw new Error('Input must be a string');
         }
@@ -84,7 +84,13 @@
     }
 
     function randomString(length = 8, lower = true, upper = true, nums = true, symbols = true) {
-        if (typeof length !== 'number' || typeof lower !== 'boolean' || typeof upper !== 'boolean' || typeof nums !== 'boolean' || typeof symbols !== 'boolean') {
+        if (
+            typeof length !== 'number' ||
+            typeof lower !== 'boolean' ||
+            typeof upper !== 'boolean' ||
+            typeof nums !== 'boolean' ||
+            typeof symbols !== 'boolean'
+        ) {
             throw new Error('Input must be a number');
         }
         if (length < 1) {
@@ -123,6 +129,5 @@
         diceRoll,
         randomString,
     };
-
-}));
+});
 //# sourceMappingURL=rngee.umd.js.map
